@@ -57,9 +57,3 @@ htmlcov/
 *.sublime-project
 *.sublime-workspace
 .env
-
-*.pyc
-*.pyo
-*.pyd
-
-**/tests/
