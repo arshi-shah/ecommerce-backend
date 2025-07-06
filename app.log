@@ -1,0 +1,67 @@
+
+2025-06-28 11:18:19,049 | INFO | Signin attempt for email: muskan02@gmail.com
+2025-06-28 11:18:19,882 | INFO | User signed in: muskan02@gmail.com (ID: 3)
+2025-06-28 11:19:34,119 | INFO | Password reset requested for email: arshi.shah.cs@gmail.com
+2025-06-28 11:19:38,668 | INFO | Password reset token sent to: arshi.shah.cs@gmail.com
+2025-06-28 11:20:35,741 | INFO | Attempting to reset password using token
+2025-06-28 11:20:55,316 | INFO | Attempting to reset password using token
+2025-06-28 11:23:05,030 | INFO | Password reset requested for email: arshi.shah.cs@gmail.com
+2025-06-28 11:23:09,650 | INFO | Password reset token sent to: arshi.shah.cs@gmail.com
+2025-06-28 11:23:50,841 | INFO | Attempting to reset password using token
+2025-06-28 11:23:51,465 | INFO | Password successfully reset for user ID: 2
+2025-06-28 19:09:34,344 | INFO | Signin attempt for email: arshi09@gmail.com
+2025-06-28 19:10:00,359 | INFO | Signin attempt for email: arshi09@gmail.com
+2025-06-28 19:10:27,771 | INFO | Signin attempt for email: muskan02@gmail.com
+2025-06-28 19:11:11,283 | INFO | Signin attempt for email: muskan02@gmail.com
+2025-06-28 19:13:49,874 | INFO | Signin attempt for email: arshi.shah.cs@gmail.com
+2025-06-28 19:13:50,330 | INFO | User signed in: arshi.shah.cs@gmail.com (ID: 2)
+2025-06-28 19:15:43,505 | WARNING | Authentication failed: User with email '2' not found
+2025-06-28 19:15:46,721 | WARNING | Authentication failed: User with email '2' not found
+2025-06-28 19:15:56,702 | WARNING | Authentication failed: User with email '2' not found
+2025-06-28 19:49:13,874 | INFO | Signin attempt for email: arshi.shah.cs@gmail.com
+2025-06-28 19:49:14,192 | INFO | User signed in: arshi.shah.cs@gmail.com (ID: 2)
+2025-06-28 20:20:12,981 | INFO | Signup attempt for email: adminuser@gmail.com
+2025-06-28 20:20:28,666 | INFO | Signup attempt for email: admin01@gmail.com
+2025-06-28 20:20:29,285 | INFO | New user created with ID: 6
+2025-06-28 22:15:26,015 | INFO | Signin attempt for email: admin01@gmail.com
+2025-06-28 22:15:26,758 | INFO | User signed in: admin01@gmail.com (ID: 6)
+2025-06-28 22:16:36,786 | INFO | [admin] Product created with ID: 5
+2025-06-28 22:24:51,717 | INFO | [admin] Listing all products
+2025-06-28 22:25:07,962 | INFO | [admin] Fetching product with ID: 4
+2025-06-28 22:25:08,000 | INFO | [admin] Product updated: ID 4
+2025-06-28 22:25:27,513 | INFO | [admin] Deleting product ID: 4
+2025-06-28 22:25:27,532 | INFO | [admin] Product deleted: ID 4
+2025-06-28 22:52:20,830 | INFO | Signup attempt for email: user01@gmail.com
+2025-06-28 22:52:21,700 | INFO | New user created with ID: 7
+2025-06-28 22:52:45,472 | INFO | Signin attempt for email: user01@gmail.com
+2025-06-28 22:52:46,015 | INFO | User signed in: user01@gmail.com (ID: 7)
+2025-06-28 23:06:13,804 | INFO | Signin attempt for email: user01@gmail.com
+2025-06-28 23:06:14,547 | INFO | User signed in: user01@gmail.com (ID: 7)
+2025-06-28 23:07:31,629 | INFO | Add to cart request by user 7 for product 1 (qty: 1)
+2025-06-28 23:07:31,744 | WARNING | Product 1 not found for user 7
+2025-06-28 23:07:41,762 | INFO | Add to cart request by user 7 for product 5 (qty: 1)
+2025-06-28 23:07:41,773 | INFO | Added product 5 to cart for user 7
+2025-06-28 23:07:41,787 | INFO | Cart updated successfully for user 7
+2025-06-28 23:08:13,220 | INFO | User 7 requested to view cart
+2025-06-28 23:08:15,768 | INFO | User 7 requested to view cart
+2025-06-28 23:08:37,959 | INFO | User 7 is updating cart for product 5 to qty: 2
+2025-06-28 23:08:37,979 | INFO | Cart quantity updated (User: 7, Product: 5, Qty: 2)
+2025-06-28 23:14:46,620 | ERROR | Unexpected error during checkout
+
+2025-06-29 10:06:50,513 | INFO | Signin attempt for email: user01@gmail.com
+2025-06-29 10:06:51,300 | INFO | User signed in: user01@gmail.com (ID: 7)
+2025-06-29 10:07:23,245 | INFO | Fetched 0 orders for user_id=7
+2025-06-29 10:07:27,178 | INFO | Fetched 0 orders for user_id=7
+2025-06-29 10:07:42,664 | INFO | Order not found: order_id=1, user_id=7
+2025-06-29 10:07:49,002 | INFO | Order not found: order_id=5, user_id=7
+2025-06-29 11:07:56,842 | WARNING | JWT error: Signature has expired.
+2025-06-29 11:16:22,523 | INFO | Signin attempt for email: user01@gmail.com
+2025-06-29 11:16:23,377 | INFO | User signed in: user01@gmail.com (ID: 7)
+2025-06-29 11:17:17,450 | ERROR | Unexpected error during checkout
+Traceback (most recent call last):
+  File "D:\fastapi-ecommerce\app\checkout\routes.py", line 24, in checkout
+    cart_items = db.query(cart_models.Carts).filter_by(user_id=current_user.id).all()
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: module 'app.cart.models' has no attribute 'Carts'
+2025-06-29 11:17:44,109 | INFO | Add to cart request by user 7 for product 1 (qty: 2)
+2025-06-29 11:17:44,238 | WARNING | Product 1 not found for user 7
